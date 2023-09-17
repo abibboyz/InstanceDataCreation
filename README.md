@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Some useful commands
+*******************
+Docker compose build
+Run Docker : docker compose up
+
+Run migration : docker compose run web rails db:migrate
+
+If no database is shown
+
+Run db create : docker compose run web rails db:create
+
+Run this if you add new file in assets like js/css/images,etc : docker compose run web rails assets:precompile
