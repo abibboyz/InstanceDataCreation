@@ -96,3 +96,30 @@ User.create([
     { title: 'ML Dataset', file_url: 'https://example.com/dataset.csv', course_id: 5 }
   ])
   
+
+#Models details
+# rails generate model User name:string email:string
+# rails generate model Student user:references date_of_birth:date
+# rails generate model Course name:string description:text
+# rails generate model Enrollment user:references student:references course:references
+# rails generate model Teacher user:references qualification:string
+# rails generate model Assignment title:string description:text course:references
+# rails generate model Grade score:integer student:references assignment:references
+# rails generate model Attendance date:date student:references course:references
+# rails generate model Announcement title:string content:text course:references
+# rails generate model Material title:string file_url:string course:references
+
+
+
+  #for accidental delete of migration
+# rails generate migration CreateUsers name:string email:string
+# rails generate migration CreateStudents user:references date_of_birth:date
+# rails generate migration CreateCourses name:string description:text
+# rails generate migration CreateEnrollments user:references student:references course:references
+# rails generate migration CreateTeachers user:references qualification:string
+# rails generate migration CreateAssignments title:string description:text course:references
+# rails generate migration CreateGrades score:integer student:references assignment:references
+# rails generate migration CreateAttendances date:date student:references course:references
+# rails generate migration CreateAnnouncements title:string content:text course:references
+# rails generate migration CreateMaterials title:string file_url:string course:references
+
