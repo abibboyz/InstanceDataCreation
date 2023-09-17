@@ -36,3 +36,7 @@ If no database is shown
 Run db create : docker compose run web rails db:create
 
 Run this if you add new file in assets like js/css/images,etc : docker compose run web rails assets:precompile
+
+
+load existing data from seed to db:
+docker compose run web rails db:seed
