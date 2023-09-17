@@ -7,16 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag 'd3_visualization' %>
     <% #jquery, popperjs and bootstrap added %>
     <%= javascript_include_tag "jquery-3.7.1.min.js" %>
     <%= javascript_include_tag "popper.min.js" %>
     <%= javascript_include_tag "bootstrap.min.js" %>
-    <%= javascript_include_tag "d3.v4.min.js" %>
+    <%= javascript_include_tag "d3.v3.min.js" %>
+    <%= javascript_include_tag 'd3_visualization' %>
     
     
   </head>
 
   <body>
-    <%= yield %>
+      <%= yield %>
   </body>
 </html>
