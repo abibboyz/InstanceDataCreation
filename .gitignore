@@ -29,3 +29,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+
+# Ignore development SQLite database
+/db/development.sqlite3
+
+# Ignore schema file
+/db/schema.rb
