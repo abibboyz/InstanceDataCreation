@@ -7,16 +7,29 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "navbar_styles" %>
+    <%= stylesheet_link_tag "global_styles" %>
     <% #jquery, popperjs and bootstrap added %>
     <%= javascript_include_tag "jquery-3.7.1.min.js" %>
     <%= javascript_include_tag "popper.min.js" %>
     <%= javascript_include_tag "bootstrap.min.js" %>
-    <%= javascript_include_tag "d3.v4.min.js" %>
+    <%= javascript_include_tag "d3.v3.min.js" %>
+    
+
     
     
   </head>
 
   <body>
+
+  <%= render "navbar" %>
+
+  <div class="container">
     <%= yield %>
+  </div>  
+
+  <footer>
+      &emsp;&emsp;&emsp;&emsp;&copy; <%= Time.now.year %> Data Creation Website
+  </footer>
   </body>
 </html>

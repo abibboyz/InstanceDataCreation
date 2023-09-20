@@ -1,0 +1,55 @@
+/* CSS for the navbar logo */
+.navbar-logo {
+  max-width: 150px;
+  margin-right: 10px;
+}
+
+/* CSS to vertically center menu items */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* CSS to horizontally center the form input and button */
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-darker {
+  background-color: #444;
+  color: white;
+}
+
+/* Custom CSS for link styles */
+.ruby-link {
+  color: white;
+  text-decoration: none;
+  /* Set the link text color to white */
+  text-decoration: none;
+  /* Remove underlines from links */
+}
+
+.ruby-link:hover {
+  text-transform: uppercase;
+  color: white;
+  /* Add underline on hover (optional) */
+}
+
+.ruby-link.active {
+  text-transform: uppercase;
+  color: white;
+}
