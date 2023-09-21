@@ -1,0 +1,91 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+/* mid section css code for generate button and graph */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+}
+
+.graph-box {
+  flex: 3;
+  /* 3/4 of the available width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.button-box {
+  flex: 1;
+  /* 1/4 of the available width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.button-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.button-box label {
+  display: block;
+  margin-top: 10px;
+}
+
+.button-box input,
+.button-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* css for graph */
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
