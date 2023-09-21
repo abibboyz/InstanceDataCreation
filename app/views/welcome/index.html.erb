@@ -1,25 +1,28 @@
-    <!-- Form Row -->
-    <div class="row">
-      <div class="col-md-6">
-        <div class="button-box">
-          <h2>Generate Data</h2>
-          <form id="generateForm">
-            <fieldset>
-              <label for="textarea">What do you desire</label>
-              <textarea id="desire" name="desire" cols='70' rows='5'></textarea>
-              <br>
-            </fieldset>
-            <button id="generateButton" type="button">Generate</button>
-          </form>
-        </div>
-      </div>
+<div class="container-fluid bg-white py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center mb-4">
+      <%= image_tag "Logo.png", alt: "Your Logo Description", class: "img-fluid mb-4" %>
+      <h2>Generate Data</h2>
+      <p>Add your prompt below to generate sample data:</p>
     </div>
+    <div class="col-md-4"> <!-- Adjust the column size as needed -->
+      <form id="generateForm" class="mb-4">
+        <div class="mb-3">
+          <textarea id="desire" name="desire" class="form-control form-control-sm" rows="3" placeholder="Enter your prompt here..."></textarea>
+        </div>
+        <div class="d-grid gap-2">
+          <button id="generateButton" type="button" class="btn btn-success">Generate</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    <!-- Graph Row -->
-    <div class="row">
-      <div class="col-md-12">
-        <div id="d3-graph" class="graph-box">
-          <!-- Your SVG content goes here -->
-        </div>
+  <!-- Graph Row -->
+  <div class="row mt-5 justify-content-center">
+    <div class="col-md-8"> <!-- Adjust the column size if needed -->
+      <div id="d3-graph" class="graph-box border p-4 d-flex justify-content-center align-items-center">
+        <!-- Your SVG content goes here -->
       </div>
     </div>
+  </div>
+</div>
