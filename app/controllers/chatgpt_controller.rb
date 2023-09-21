@@ -4,6 +4,7 @@ class ChatgptController < ApplicationController
   end
 
   def data
+    # TODO this return the factory bot data
     {:name => "any name"}
   end
 end
