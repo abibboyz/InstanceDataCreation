@@ -65,6 +65,8 @@ function main(links) {
     .on("tick", tick)
     .start();
 
+  $(".graph-box").html("");
+
   var svg = d3
     .select(".graph-box")
     .append("svg")
