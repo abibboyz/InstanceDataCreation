@@ -1,31 +1,25 @@
-# Use the official Ruby image as the base image
-FROM ruby:3.1.2
+# Use the official Python image as the base image
+FROM python:3.11-slim
 
-# Set environment variables for Rails
-ENV RAILS_ENV=development \
-    RAILS_ROOT=/app
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 # Create and set the working directory
-RUN mkdir $RAILS_ROOT
-WORKDIR $RAILS_ROOT
+WORKDIR /app
 
-# Install dependencies
-RUN apt-get update -qq && apt-get install -y nodejs sqlite3
+# Install system dependencies
+RUN apt-get update -qq && apt-get install -y sqlite3
 
-# Install Bundler
-RUN gem install bundler
-
-# Copy the Gemfile and Gemfile.lock into the image
-COPY Gemfile Gemfile.lock ./
-
-# Install gems
-RUN bundle install
+# Copy requirements file and install dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the image
-COPY . .
+COPY . /app/
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port 8000
+EXPOSE 8000
 
-# Start the Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# Start the Django server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

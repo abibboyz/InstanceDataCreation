@@ -36,3 +36,7 @@
 
 # Ignore schema file
 /db/schema.rb
+db.sqlite3
+*.log
+**/__pycache__/
+*.pyc
