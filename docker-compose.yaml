@@ -4,9 +4,8 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "8000:8000"
     volumes:
       - .:/app
     environment:
-      RAILS_ENV: development
-      DATABASE_URL: sqlite3:///app/db/development.sqlite3
+      - DEBUG=1
